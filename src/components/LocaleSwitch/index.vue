@@ -2,13 +2,13 @@
 import { ref } from "vue"
 import { useLocales } from "../../store/modules/locales"
 
-type contentType = "切换中文" | "Switch To English"
-const content = ref<contentType>("Switch To English")
+type contentType = "切换中文" | "Switch English"
+const content = ref<contentType>("Switch English")
 const locales = useLocales()
 
 const click = () => {
   locales.locale = locales.locale === "en" ? "zh" : "en"
-  content.value = locales.locale === "en" ? "切换中文" : "Switch To English"
+  content.value = locales.locale === "en" ? "切换中文" : "Switch English"
 }
 </script>
 
